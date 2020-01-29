@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smarthyco/src/resources/spacing.dart';
 import 'package:smarthyco/src/styles/text_style_sheet.dart';
 import 'package:smarthyco/src/styles/widget_style_sheet.dart';
 import 'package:smarthyco/src/widgets/custom_app_bar.dart';
@@ -12,13 +13,15 @@ class RegisterScreenState extends State<RegisterScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  CustomAppBar cab = const CustomAppBar('title', Text('data'));
-
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      //appBar:
+      appBar: CustomAppBar(
+        backgroundColor: Colors.white,
+        title: 'Daftar',
+        isCenter: true,
+      ),
       body: SingleChildScrollView(
         child: Container(
           color: Colors.greenAccent,
@@ -41,8 +44,8 @@ class RegisterScreenState extends State<RegisterScreen> {
         children: <Widget>[
           emailForm(size),
           passwordForm(size),
+          Spacing.vertical30,
           loginButton(size),
-          registerButton(size),
         ],
       ),
     );
@@ -86,24 +89,6 @@ class RegisterScreenState extends State<RegisterScreen> {
         shape: WSS.roundedBorder(20, WSS.borderGreen),
         color: Colors.white,
         highlightColor: Colors.green[100],
-      ),
-    );
-  }
-
-  Container registerButton(Size size) {
-    return Container(
-      width: size.width * 0.75,
-      child: FlatButton(
-        onPressed: () {
-          //
-        },
-        child: const Text(
-          'Sudah punya akun?',
-          style: TSS.mdWhiteBold,
-        ),
-        shape: WSS.roundedBorder(20, WSS.noBorder),
-        color: Colors.green,
-        highlightColor: Colors.white30,
       ),
     );
   }

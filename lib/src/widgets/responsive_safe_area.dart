@@ -6,19 +6,19 @@ typedef ResponsiveBuilder = Widget Function(
 );
 
 class ResponsiveSafeArea extends StatelessWidget {
-  final ResponsiveBuilder responsiveBuilder;
-
   const ResponsiveSafeArea({
     @required ResponsiveBuilder builder,
     Key key,
   })  : responsiveBuilder = builder,
         super(key: key);
 
+  final ResponsiveBuilder responsiveBuilder;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: LayoutBuilder(
-        builder: (context, constraints) {
+        builder: (BuildContext context, BoxConstraints constraints) {
           return responsiveBuilder(
             context,
             constraints.biggest,
