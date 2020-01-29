@@ -101,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
       width: size.width * 0.75,
       child: FlatButton(
         onPressed: () {
-          //
+          Navigator.pushNamed(context, '/register');
         },
         child: const Text(
           'Daftar',

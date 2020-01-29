@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smarthyco/src/screens/splash_scr.dart';
 
+import 'src/resources/router.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,6 +14,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: SplashScreen(),
+      onGenerateRoute: Router.generateRoute,
+      initialRoute: '/',
     );
   }
 }

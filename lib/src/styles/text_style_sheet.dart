@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 
-/// format: sizeColorBold
+/// Text Style Sheet
+///
+/// this class contains constants of TextStyle
+/// to generalize the styling of UI development
+///
+/// usage format: [size][Color][Bold]
+///
+/// available size: [sm] [md] [bg] [lg]
+///
+/// available color: [White] [Black] [Prime]
+///
+/// add [Bold] to use bolded version
 ///
 /// example:
 ///
@@ -9,6 +20,15 @@ import 'package:flutter/material.dart';
 /// - smBlackBold
 ///
 /// - lg
+///
+/// code example:
+///
+/// ```
+/// Text(
+///   'some text',
+///   style: TSS.lgBlackBold,
+/// )
+/// ```
 class TSS {
   static const Color primeColor = Colors.green;
 

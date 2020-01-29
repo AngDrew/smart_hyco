@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/screens/login_scr.dart';
-
-import 'register_scr.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -13,10 +10,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future<void>.delayed(const Duration(seconds: 1), () {
-      Navigator.push(
-          context,
-          MaterialPageRoute<dynamic>(
-              builder: (BuildContext context) => RegisterScreen()));
+      Navigator.pushReplacementNamed<void, void>(context, '/login');
     });
   }
 
