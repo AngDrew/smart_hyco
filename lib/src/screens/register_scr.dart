@@ -45,7 +45,7 @@ class RegisterScreenState extends State<RegisterScreen> {
           emailForm(size),
           passwordForm(size),
           Spacing.vertical30,
-          loginButton(size),
+          registerButton(size),
         ],
       ),
     );
@@ -75,7 +75,7 @@ class RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  Container loginButton(Size size) {
+  Container registerButton(Size size) {
     return Container(
       width: size.width * 0.75,
       child: FlatButton(
@@ -84,11 +84,11 @@ class RegisterScreenState extends State<RegisterScreen> {
         },
         child: const Text(
           'Daftar',
-          style: TSS.mdPrimeBold,
+          style: TSS.mdWhiteBold,
         ),
-        shape: WSS.roundedBorder(20, WSS.borderGreen),
-        color: Colors.white,
-        highlightColor: Colors.green[100],
+        shape: WSS.roundedBorder(20, WSS.noBorder),
+        color: Colors.green,
+        highlightColor: Colors.white30,
       ),
     );
   }

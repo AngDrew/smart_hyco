@@ -3,7 +3,8 @@ import 'package:smarthyco/src/resources/color_palette.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   CustomAppBar({
-    @required this.title,
+    this.title,
+    this.widgetTitle,
     this.backgroundColor = CP.primaryColor,
     this.itemColor = Colors.black,
     this.actions,
@@ -12,6 +13,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   });
 
   final String title;
+  final Widget widgetTitle;
   final Color backgroundColor;
   final Color itemColor;
   final List<Widget> actions;
@@ -30,13 +32,15 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         ),
       ),
       centerTitle: isCenter,
-      title: Text(
-        title,
-        style: TextStyle(
-          fontSize: 20,
-          color: itemColor,
-        ),
-      ),
+      title: (widgetTitle != null)
+          ? widgetTitle
+          : Text(
+              title,
+              style: TextStyle(
+                fontSize: 20,
+                color: itemColor,
+              ),
+            ),
       actions: actions,
       elevation: elevation,
     );
