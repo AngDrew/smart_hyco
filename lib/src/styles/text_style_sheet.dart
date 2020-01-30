@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smarthyco/src/resources/color_palette.dart';
 
 /// Text Style Sheet
 ///
@@ -7,9 +8,11 @@ import 'package:flutter/material.dart';
 ///
 /// usage format: [size][Color][Bold]
 ///
-/// available size: [sm] [md] [bg] [lg]
+/// available size: [xs] [sm] [md] [bg] [lg] [xl] [x2l] [x3l] [x4l]
 ///
 /// available color: [White] [Black] [Prime]
+///
+/// note: the `PrimaryColor` is controlled from `color_palette.dart`
 ///
 /// add [Bold] to use bolded version
 ///
@@ -29,10 +32,14 @@ import 'package:flutter/material.dart';
 ///   style: TSS.lgBlackBold,
 /// )
 /// ```
+
 class TSS {
-  static const Color primeColor = Colors.green;
+  static const Color primeColor = CP.primaryColor;
 
   //default colored text
+  static const TextStyle xs = TextStyle(
+    fontSize: 8,
+  );
   static const TextStyle sm = TextStyle(
     fontSize: 12,
   );
@@ -45,8 +52,24 @@ class TSS {
   static const TextStyle lg = TextStyle(
     fontSize: 24,
   );
+  static const TextStyle xl = TextStyle(
+    fontSize: 28,
+  );
+  static const TextStyle x2l = TextStyle(
+    fontSize: 32,
+  );
+  static const TextStyle x3l = TextStyle(
+    fontSize: 36,
+  );
+  static const TextStyle x4l = TextStyle(
+    fontSize: 40,
+  );
 
   //prime colored text
+  static const TextStyle xsPrime = TextStyle(
+    fontSize: 8,
+    color: primeColor,
+  );
   static const TextStyle smPrime = TextStyle(
     fontSize: 12,
     color: primeColor,
@@ -63,8 +86,28 @@ class TSS {
     fontSize: 24,
     color: primeColor,
   );
+  static const TextStyle xlPrime = TextStyle(
+    fontSize: 28,
+    color: primeColor,
+  );
+  static const TextStyle x2lPrime = TextStyle(
+    fontSize: 32,
+    color: primeColor,
+  );
+  static const TextStyle x3lPrime = TextStyle(
+    fontSize: 36,
+    color: primeColor,
+  );
+  static const TextStyle x4lPrime = TextStyle(
+    fontSize: 40,
+    color: primeColor,
+  );
 
   //white colored text
+  static const TextStyle xsWhite = TextStyle(
+    fontSize: 8,
+    color: Colors.white,
+  );
   static const TextStyle smWhite = TextStyle(
     fontSize: 12,
     color: Colors.white,
@@ -81,8 +124,28 @@ class TSS {
     fontSize: 24,
     color: Colors.white,
   );
+  static const TextStyle xlWhite = TextStyle(
+    fontSize: 28,
+    color: Colors.white,
+  );
+  static const TextStyle x2lWhite = TextStyle(
+    fontSize: 32,
+    color: Colors.white,
+  );
+  static const TextStyle x3lWhite = TextStyle(
+    fontSize: 36,
+    color: Colors.white,
+  );
+  static const TextStyle x4lWhite = TextStyle(
+    fontSize: 40,
+    color: Colors.white,
+  );
 
   //black colored text
+  static const TextStyle xsBlack = TextStyle(
+    fontSize: 8,
+    color: Colors.black,
+  );
   static const TextStyle smBlack = TextStyle(
     fontSize: 12,
     color: Colors.black,
@@ -99,8 +162,29 @@ class TSS {
     fontSize: 24,
     color: Colors.black,
   );
+  static const TextStyle xlBlack = TextStyle(
+    fontSize: 28,
+    color: Colors.black,
+  );
+  static const TextStyle x2lBlack = TextStyle(
+    fontSize: 32,
+    color: Colors.black,
+  );
+  static const TextStyle x3lBlack = TextStyle(
+    fontSize: 36,
+    color: Colors.black,
+  );
+  static const TextStyle x4lBlack = TextStyle(
+    fontSize: 40,
+    color: Colors.black,
+  );
 
   //prime colored bold text
+  static const TextStyle xsPrimeBold = TextStyle(
+    fontSize: 8,
+    color: primeColor,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle smPrimeBold = TextStyle(
     fontSize: 12,
     color: primeColor,
@@ -121,8 +205,33 @@ class TSS {
     color: primeColor,
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle xlPrimeBold = TextStyle(
+    fontSize: 28,
+    color: primeColor,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x2lPrimeBold = TextStyle(
+    fontSize: 32,
+    color: primeColor,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x3lPrimeBold = TextStyle(
+    fontSize: 36,
+    color: primeColor,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x4lPrimeBold = TextStyle(
+    fontSize: 40,
+    color: primeColor,
+    fontWeight: FontWeight.w600,
+  );
 
   //white colored bold text
+  static const TextStyle xsWhiteBold = TextStyle(
+    fontSize: 8,
+    color: Colors.white,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle smWhiteBold = TextStyle(
     fontSize: 12,
     color: Colors.white,
@@ -143,8 +252,33 @@ class TSS {
     color: Colors.white,
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle xlWhiteBold = TextStyle(
+    fontSize: 28,
+    color: Colors.white,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x2lWhiteBold = TextStyle(
+    fontSize: 32,
+    color: Colors.white,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x3lWhiteBold = TextStyle(
+    fontSize: 36,
+    color: Colors.white,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x4lWhiteBold = TextStyle(
+    fontSize: 40,
+    color: Colors.white,
+    fontWeight: FontWeight.w600,
+  );
 
   //black colored bold text
+  static const TextStyle xsBlackBold = TextStyle(
+    fontSize: 8,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle smBlackBold = TextStyle(
     fontSize: 12,
     color: Colors.black,
@@ -162,6 +296,26 @@ class TSS {
   );
   static const TextStyle lgBlackBold = TextStyle(
     fontSize: 24,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle xlBlackBold = TextStyle(
+    fontSize: 28,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x2lBlackBold = TextStyle(
+    fontSize: 32,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x3lBlackBold = TextStyle(
+    fontSize: 36,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle x4lBlackBold = TextStyle(
+    fontSize: 40,
     color: Colors.black,
     fontWeight: FontWeight.w600,
   );

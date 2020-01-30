@@ -10,8 +10,10 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class RegisterScreenState extends State<RegisterScreen> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -42,11 +44,25 @@ class RegisterScreenState extends State<RegisterScreen> {
     return Form(
       child: Column(
         children: <Widget>[
+          nameForm(size),
           emailForm(size),
           passwordForm(size),
+          phoneForm(size),
           Spacing.vertical30,
-          loginButton(size),
+          registerButton(size),
         ],
+      ),
+    );
+  }
+
+  Container nameForm(Size size) {
+    return Container(
+      width: size.width * 0.9,
+      child: TextFormField(
+        controller: _nameController,
+        decoration: const InputDecoration(
+          hintText: 'Masukkan email',
+        ),
       ),
     );
   }
@@ -55,7 +71,8 @@ class RegisterScreenState extends State<RegisterScreen> {
     return Container(
       width: size.width * 0.9,
       child: TextFormField(
-        controller: emailController,
+        controller: _emailController,
+        keyboardType: TextInputType.emailAddress,
         decoration: const InputDecoration(
           hintText: 'Masukkan email',
         ),
@@ -67,7 +84,8 @@ class RegisterScreenState extends State<RegisterScreen> {
     return Container(
       width: size.width * 0.9,
       child: TextFormField(
-        controller: passwordController,
+        controller: _passwordController,
+        obscureText: true,
         decoration: const InputDecoration(
           hintText: 'Masukkan kata sandi',
         ),
@@ -75,21 +93,41 @@ class RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  Container loginButton(Size size) {
+  Container phoneForm(Size size) {
+    return Container(
+      width: size.width * 0.9,
+      child: TextFormField(
+        controller: _phoneController,
+        keyboardType: TextInputType.number,
+        decoration: const InputDecoration(
+          hintText: 'Masukkan email',
+        ),
+      ),
+    );
+  }
+
+  Container registerButton(Size size) {
     return Container(
       width: size.width * 0.75,
       child: FlatButton(
         onPressed: () {
-          //
+          Navigator.pushReplacementNamed(context, '/main');
         },
         child: const Text(
           'Daftar',
-          style: TSS.mdPrimeBold,
+          style: TSS.mdWhiteBold,
         ),
-        shape: WSS.roundedBorder(20, WSS.borderGreen),
-        color: Colors.white,
-        highlightColor: Colors.green[100],
+        shape: WSS.roundedBorder(20, WSS.noBorder),
+        color: Colors.green,
+        highlightColor: Colors.white30,
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
   }
 }

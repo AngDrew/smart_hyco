@@ -8,8 +8,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       width: size.width * 0.9,
       child: TextFormField(
-        controller: emailController,
+        controller: _emailController,
         decoration: const InputDecoration(
           hintText: 'Masukkan email',
         ),
@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       width: size.width * 0.9,
       child: TextFormField(
-        controller: passwordController,
+        controller: _passwordController,
         decoration: const InputDecoration(
           hintText: 'Masukkan kata sandi',
         ),
@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
       width: size.width * 0.75,
       child: FlatButton(
         onPressed: () {
-          //
+          Navigator.pushReplacementNamed(context, '/main');
         },
         child: const Text(
           'Masuk',
@@ -112,5 +112,12 @@ class _LoginScreenState extends State<LoginScreen> {
         highlightColor: Colors.white30,
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
   }
 }
