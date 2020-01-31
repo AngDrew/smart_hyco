@@ -3,7 +3,7 @@ import 'package:smarthyco/src/resources/color_palette.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   CustomAppBar({
-    this.title,
+    this.title = '',
     this.widgetTitle,
     this.backgroundColor = CP.primaryColor,
     this.itemColor = Colors.black,

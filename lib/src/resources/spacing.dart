@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 class Spacing {
   //vertical spacing
+  static const SizedBox vertical5 = SizedBox(
+    height: 5,
+  );
   static const SizedBox vertical10 = SizedBox(
     height: 10,
   );
@@ -64,4 +67,5 @@ class Spacing {
   static const EdgeInsets horizontalSymetric50 = EdgeInsets.symmetric(
     horizontal: 50,
   );
+  static const EdgeInsets noSpace = EdgeInsets.all(0);
 }
