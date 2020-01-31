@@ -20,7 +20,7 @@ class RegisterScreenState extends State<RegisterScreen> {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: CustomAppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.greenAccent,
         title: 'Daftar',
         isCenter: true,
       ),

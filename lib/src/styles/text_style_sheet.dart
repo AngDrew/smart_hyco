@@ -179,6 +179,44 @@ class TSS {
     color: Colors.black,
   );
 
+  //grey colored text
+  static const TextStyle xsGrey = TextStyle(
+    fontSize: 8,
+    color: Colors.grey,
+  );
+  static const TextStyle smGrey = TextStyle(
+    fontSize: 12,
+    color: Colors.grey,
+  );
+  static const TextStyle mdGrey = TextStyle(
+    fontSize: 16,
+    color: Colors.grey,
+  );
+  static const TextStyle bgGrey = TextStyle(
+    fontSize: 20,
+    color: Colors.grey,
+  );
+  static const TextStyle lgGrey = TextStyle(
+    fontSize: 24,
+    color: Colors.grey,
+  );
+  static const TextStyle xlGrey = TextStyle(
+    fontSize: 28,
+    color: Colors.grey,
+  );
+  static const TextStyle x2lGrey = TextStyle(
+    fontSize: 32,
+    color: Colors.grey,
+  );
+  static const TextStyle x3lGrey = TextStyle(
+    fontSize: 36,
+    color: Colors.grey,
+  );
+  static const TextStyle x4lGrey = TextStyle(
+    fontSize: 40,
+    color: Colors.grey,
+  );
+
   //prime colored bold text
   static const TextStyle xsPrimeBold = TextStyle(
     fontSize: 8,

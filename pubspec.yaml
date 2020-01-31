@@ -26,6 +26,7 @@ dependencies:
   provider: ^3.2.0
   percent_indicator: ^2.1.1+1
   dio: ^3.0.8
+  flutter_money_formatter: ^0.8.3
 
 dev_dependencies:
   flutter_test:
