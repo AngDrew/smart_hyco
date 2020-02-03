@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/models/garden_model.dart';
-import 'package:smarthyco/src/models/offer_model.dart';
-import 'package:smarthyco/src/resources/spacing.dart';
-import 'package:smarthyco/src/screens/arguments/arguments.dart';
-import 'package:smarthyco/src/styles/text_style_sheet.dart';
-import 'package:smarthyco/src/widgets/widger_catalog.dart';
+import 'package:tanam_kota/src/models/garden_model.dart';
+import 'package:tanam_kota/src/models/offer_model.dart';
+import 'package:tanam_kota/src/resources/spacing.dart';
+import 'package:tanam_kota/src/screens/arguments/arguments.dart';
+import 'package:tanam_kota/src/styles/text_style_sheet.dart';
+import 'package:tanam_kota/src/widgets/widger_catalog.dart';
 
 import 'destination.dart';
 

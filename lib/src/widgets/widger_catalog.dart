@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:smarthyco/src/models/garden_model.dart';
-import 'package:smarthyco/src/models/offer_model.dart';
-import 'package:smarthyco/src/resources/color_palette.dart';
-import 'package:smarthyco/src/resources/spacing.dart';
-import 'package:smarthyco/src/styles/text_style_sheet.dart';
-import 'package:smarthyco/src/styles/widget_style_sheet.dart';
+import 'package:tanam_kota/src/models/garden_model.dart';
+import 'package:tanam_kota/src/models/offer_model.dart';
+import 'package:tanam_kota/src/resources/color_palette.dart';
+import 'package:tanam_kota/src/resources/spacing.dart';
+import 'package:tanam_kota/src/styles/text_style_sheet.dart';
+import 'package:tanam_kota/src/styles/widget_style_sheet.dart';
 
 class WidgetCatalog {
   static Widget gardenItem(GardenModel garden) {
@@ -40,7 +40,7 @@ class WidgetCatalog {
           ),
         ),
         Expanded(
-          flex: 2,
+          flex: 3,
           child: MaterialButton(
             onPressed: () {},
             child: Text(
@@ -85,7 +85,7 @@ class WidgetCatalog {
           ),
         ),
         Expanded(
-          flex: 2,
+          flex: 3,
           child: MaterialButton(
             onPressed: () {},
             child: Text(

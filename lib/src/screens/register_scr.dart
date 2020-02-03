@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/resources/spacing.dart';
-import 'package:smarthyco/src/styles/text_style_sheet.dart';
-import 'package:smarthyco/src/styles/widget_style_sheet.dart';
-import 'package:smarthyco/src/widgets/custom_app_bar.dart';
+import 'package:tanam_kota/src/resources/spacing.dart';
+import 'package:tanam_kota/src/styles/text_style_sheet.dart';
+import 'package:tanam_kota/src/styles/widget_style_sheet.dart';
+import 'package:tanam_kota/src/widgets/custom_app_bar.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -29,12 +29,7 @@ class RegisterScreenState extends State<RegisterScreen> {
           color: Colors.greenAccent,
           alignment: Alignment.center,
           height: size.height,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              form(size),
-            ],
-          ),
+          child: form(size),
         ),
       ),
     );

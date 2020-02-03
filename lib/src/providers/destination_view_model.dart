@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/screens/sub_screens/destination.dart';
+import 'package:tanam_kota/src/screens/sub_screens/destination.dart';
 
 class DestinationViewModel extends ChangeNotifier {
   int _index = 0;

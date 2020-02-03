@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/models/garden_model.dart';
-import 'package:smarthyco/src/resources/spacing.dart';
-import 'package:smarthyco/src/widgets/custom_app_bar.dart';
-import 'package:smarthyco/src/widgets/widger_catalog.dart';
+import 'package:tanam_kota/src/models/garden_model.dart';
+import 'package:tanam_kota/src/resources/spacing.dart';
+import 'package:tanam_kota/src/widgets/custom_app_bar.dart';
+import 'package:tanam_kota/src/widgets/widger_catalog.dart';
 
 import 'arguments/arguments.dart';
 

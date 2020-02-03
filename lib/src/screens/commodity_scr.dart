@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/helpers/fetch_image.dart';
-import 'package:smarthyco/src/helpers/number_formatter.dart';
-import 'package:smarthyco/src/models/commodity_model.dart';
-import 'package:smarthyco/src/resources/spacing.dart';
-import 'package:smarthyco/src/styles/text_style_sheet.dart';
-import 'package:smarthyco/src/styles/widget_style_sheet.dart';
-import 'package:smarthyco/src/widgets/custom_app_bar.dart';
+import 'package:tanam_kota/src/helpers/fetch_image.dart';
+import 'package:tanam_kota/src/helpers/number_formatter.dart';
+import 'package:tanam_kota/src/models/commodity_model.dart';
+import 'package:tanam_kota/src/resources/spacing.dart';
+import 'package:tanam_kota/src/styles/text_style_sheet.dart';
+import 'package:tanam_kota/src/styles/widget_style_sheet.dart';
+import 'package:tanam_kota/src/widgets/custom_app_bar.dart';
 
 import 'arguments/arguments.dart';
 

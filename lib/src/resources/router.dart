@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/screens/commodity_scr.dart';
-import 'package:smarthyco/src/screens/garden_list_scr.dart';
-import 'package:smarthyco/src/screens/login_scr.dart';
-import 'package:smarthyco/src/screens/main_scr.dart';
-import 'package:smarthyco/src/screens/offer_list_scr.dart';
-import 'package:smarthyco/src/screens/register_scr.dart';
-import 'package:smarthyco/src/screens/splash_scr.dart';
+import 'package:tanam_kota/src/screens/commodity_scr.dart';
+import 'package:tanam_kota/src/screens/garden_list_scr.dart';
+import 'package:tanam_kota/src/screens/login_scr.dart';
+import 'package:tanam_kota/src/screens/main_scr.dart';
+import 'package:tanam_kota/src/screens/offer_list_scr.dart';
+import 'package:tanam_kota/src/screens/register_scr.dart';
+import 'package:tanam_kota/src/screens/splash_scr.dart';
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {

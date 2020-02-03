@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/helpers/fetch_image.dart';
-import 'package:smarthyco/src/helpers/number_formatter.dart';
-import 'package:smarthyco/src/models/commodity_model.dart';
-import 'package:smarthyco/src/resources/spacing.dart';
-import 'package:smarthyco/src/screens/arguments/arguments.dart';
-import 'package:smarthyco/src/styles/text_style_sheet.dart';
+import 'package:tanam_kota/src/helpers/fetch_image.dart';
+import 'package:tanam_kota/src/helpers/number_formatter.dart';
+import 'package:tanam_kota/src/models/commodity_model.dart';
+import 'package:tanam_kota/src/resources/spacing.dart';
+import 'package:tanam_kota/src/screens/arguments/arguments.dart';
+import 'package:tanam_kota/src/styles/text_style_sheet.dart';
 
 import 'destination.dart';
 
@@ -56,19 +56,19 @@ class _CommodityViewState extends State<CommodityView> {
     );
   }
 
-  Container commodityItem(CommodityModel commodity) {
-    return Container(
-      padding: Spacing.horizontalSymetric50,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        margin: const EdgeInsets.only(top: 15, bottom: 15),
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/commodity',
-                arguments: Arguments(commodity));
-          },
+  GestureDetector commodityItem(CommodityModel commodity) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, '/commodity',
+            arguments: Arguments(commodity));
+      },
+      child: Container(
+        padding: Spacing.horizontalSymetric50,
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          margin: const EdgeInsets.only(top: 15, bottom: 15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
