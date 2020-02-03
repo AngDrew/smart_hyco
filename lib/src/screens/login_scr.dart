@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/styles/text_style_sheet.dart';
-import 'package:smarthyco/src/styles/widget_style_sheet.dart';
+import 'package:tanam_kota/src/styles/text_style_sheet.dart';
+import 'package:tanam_kota/src/styles/widget_style_sheet.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

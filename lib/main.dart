@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/screens/splash_scr.dart';
+import 'package:provider/provider.dart';
+import 'package:tanam_kota/src/screens/splash_scr.dart';
 
 import 'src/resources/router.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Smart Hyco',
+      title: 'Tanam Kota',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),

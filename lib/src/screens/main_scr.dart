@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:smarthyco/src/providers/destination_view_model.dart';
-import 'package:smarthyco/src/screens/sub_screens/commodity_view.dart';
-import 'package:smarthyco/src/screens/sub_screens/home_view.dart';
-import 'package:smarthyco/src/styles/text_style_sheet.dart';
-import 'package:smarthyco/src/styles/widget_style_sheet.dart';
-import 'package:smarthyco/src/widgets/custom_app_bar.dart';
+import 'package:tanam_kota/src/providers/destination_view_model.dart';
+import 'package:tanam_kota/src/screens/sub_screens/commodity_view.dart';
+import 'package:tanam_kota/src/screens/sub_screens/home_view.dart';
+import 'package:tanam_kota/src/styles/text_style_sheet.dart';
+import 'package:tanam_kota/src/styles/widget_style_sheet.dart';
+import 'package:tanam_kota/src/widgets/custom_app_bar.dart';
 
 import 'sub_screens/account_view.dart';
 import 'sub_screens/destination.dart';
-import 'sub_screens/miteq_view.dart';
+import 'sub_screens/monitoring_view.dart';
 import 'sub_screens/supply_view.dart';
 
 class MainScreen extends StatefulWidget {
@@ -86,7 +86,7 @@ class MainScreenState extends State<MainScreen> {
                   destination: destination,
                 );
               case 2:
-                return MiteqView(
+                return MonitoringView(
                   destination: destination,
                 );
               case 3:

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smarthyco/src/resources/color_palette.dart';
+import 'package:tanam_kota/src/resources/color_palette.dart';
 
 /// Text Style Sheet
 ///
