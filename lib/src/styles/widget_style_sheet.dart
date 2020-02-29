@@ -13,7 +13,7 @@ class WSS {
     width: 2,
   );
 
-  static const BorderSide noBorder = BorderSide.none;
+  static const BorderSide noBorderSide = BorderSide.none;
 
   //appbar stuffs
   static const Image appBarLogo = Image(

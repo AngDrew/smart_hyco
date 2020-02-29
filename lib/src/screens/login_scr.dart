@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
           'Daftar',
           style: TSS.mdWhiteBold,
         ),
-        shape: WSS.roundedBorder(20, WSS.noBorder),
+        shape: WSS.roundedBorder(20, WSS.noBorderSide),
         color: Colors.green,
         highlightColor: Colors.white30,
       ),

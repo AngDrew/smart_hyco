@@ -71,69 +71,77 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  Row gardenTitle() {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          flex: 9,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const <Widget>[
-              Text(
-                'Kebun Saya',
-                style: TSS.lgBlackBold,
-              ),
-              Text(
-                'Laporan berkala kebun saya',
-                style: TSS.smBlack,
-              ),
-            ],
+  Widget gardenTitle() {
+    return GestureDetector(
+      onTap: () => openGarden(),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            flex: 9,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const <Widget>[
+                Text(
+                  'Kebun Saya',
+                  style: TSS.lgBlackBold,
+                ),
+                Text(
+                  'Laporan berkala kebun saya',
+                  style: TSS.smBlack,
+                ),
+              ],
+            ),
           ),
-        ),
-        Expanded(
-          flex: 1,
-          child: IconButton(
-            icon: Icon(Icons.arrow_forward),
-            onPressed: () {
-              Navigator.pushNamed(context, '/garden',
-                  arguments: Arguments(gardens));
-            },
+          Expanded(
+            flex: 1,
+            child: IconButton(
+              icon: Icon(Icons.arrow_forward),
+              onPressed: () => openGarden(),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
-  Row offerTitle() {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          flex: 9,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const <Widget>[
-              Text(
-                'Penawaran kepada Anda',
-                style: TSS.lgBlackBold,
-              ),
-              Text(
-                'KLIK SUPPLY untuk konfirmasi kesediaan men-supply',
-                style: TSS.smBlack,
-              ),
-            ],
+  void openGarden() {
+    Navigator.pushNamed(context, '/garden', arguments: Arguments(gardens));
+  }
+
+  Widget offerTitle() {
+    return GestureDetector(
+      onTap: () => openOffer(),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            flex: 9,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const <Widget>[
+                Text(
+                  'Penawaran kepada Anda',
+                  style: TSS.lgBlackBold,
+                ),
+                Text(
+                  'KLIK SUPPLY untuk konfirmasi kesediaan men-supply',
+                  style: TSS.smBlack,
+                ),
+              ],
+            ),
           ),
-        ),
-        Expanded(
-          flex: 1,
-          child: IconButton(
-            icon: Icon(Icons.arrow_forward),
-            onPressed: () {
-              Navigator.pushNamed(context, '/offer',
-                  arguments: Arguments(offers));
-            },
+          Expanded(
+            flex: 1,
+            child: IconButton(
+              icon: Icon(Icons.arrow_forward),
+              onPressed: () => openOffer(),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
+  }
+
+  void openOffer() {
+    Navigator.pushNamed(context, '/offer', arguments: Arguments(offers));
   }
 }

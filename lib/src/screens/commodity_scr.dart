@@ -46,7 +46,7 @@ class _CommodityScreenState extends State<CommodityScreen> {
                       ),
                       Spacing.vertical30,
                       Card(
-                        shape: WSS.roundedBorder(20, WSS.noBorder),
+                        shape: WSS.roundedBorder(20, WSS.noBorderSide),
                         child: Container(
                           width: size.width * 0.75,
                           padding: Spacing.horizontalSymetric5,

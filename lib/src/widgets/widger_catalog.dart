@@ -39,20 +39,7 @@ class WidgetCatalog {
             ],
           ),
         ),
-        Expanded(
-          flex: 3,
-          child: MaterialButton(
-            onPressed: () {},
-            child: Text(
-              'Detail',
-              style: TSS.mdPrime,
-            ),
-            shape: WSS.roundedBorder(
-              20,
-              WSS.borderGreen,
-            ),
-          ),
-        ),
+        _button('Detail'),
       ],
     );
   }
@@ -84,21 +71,38 @@ class WidgetCatalog {
             ],
           ),
         ),
-        Expanded(
-          flex: 3,
-          child: MaterialButton(
-            onPressed: () {},
-            child: Text(
-              'Supply',
-              style: TSS.mdPrime,
-            ),
-            shape: WSS.roundedBorder(
-              20,
-              WSS.borderGreen,
-            ),
-          ),
-        ),
+        _button('Supply'),
       ],
+    );
+  }
+
+  static Expanded _button(String value) {
+    return Expanded(
+      flex: 3,
+      child: MaterialButton(
+        onPressed: () {
+          switch (value) {
+            case 'Supply':
+              //do detail
+              break;
+            case 'Detail':
+              //do value
+              break;
+            default:
+              print('invalid value');
+          }
+        },
+        child: Text(
+          value,
+          style: TSS.mdPrime,
+        ),
+        shape: WSS.roundedBorder(
+            20,
+            BorderSide(
+              color: CP.primaryColor,
+              width: 2,
+            )),
+      ),
     );
   }
 }
